@@ -28,9 +28,9 @@
 		45A85EF124A396F000FD8B3C /* HGSwiftUIDempApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGSwiftUIDempApp.swift; sourceTree = "<group>"; };
 		45A85EF224A396F000FD8B3C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		45A85EF324A396F300FD8B3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		45A85EF824A396F300FD8B3C /* HGSwiftUIDemp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HGSwiftUIDemp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45A85EF824A396F300FD8B3C /* HGSwiftUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HGSwiftUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A85EFB24A396F300FD8B3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45A85F0024A396F300FD8B3C /* HGSwiftUIDemp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HGSwiftUIDemp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45A85F0024A396F300FD8B3C /* HGSwiftUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HGSwiftUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A85F0224A396F300FD8B3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45A85F0324A396F300FD8B3C /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		45A85F1224A5872700FD8B3C /* CourseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCardView.swift; sourceTree = "<group>"; };
@@ -83,8 +83,8 @@
 		45A85EF924A396F300FD8B3C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				45A85EF824A396F300FD8B3C /* HGSwiftUIDemp.app */,
-				45A85F0024A396F300FD8B3C /* HGSwiftUIDemp.app */,
+				45A85EF824A396F300FD8B3C /* HGSwiftUIDemo.app */,
+				45A85F0024A396F300FD8B3C /* HGSwiftUIDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,7 +123,7 @@
 			);
 			name = iOS;
 			productName = iOS;
-			productReference = 45A85EF824A396F300FD8B3C /* HGSwiftUIDemp.app */;
+			productReference = 45A85EF824A396F300FD8B3C /* HGSwiftUIDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		45A85EFF24A396F300FD8B3C /* macOS */ = {
@@ -140,7 +140,7 @@
 			);
 			name = macOS;
 			productName = macOS;
-			productReference = 45A85F0024A396F300FD8B3C /* HGSwiftUIDemp.app */;
+			productReference = 45A85F0024A396F300FD8B3C /* HGSwiftUIDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -160,7 +160,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 45A85EEF24A396F000FD8B3C /* Build configuration list for PBXProject "HGSwiftUIDemp" */;
+			buildConfigurationList = 45A85EEF24A396F000FD8B3C /* Build configuration list for PBXProject "HGSwiftUIDemo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -353,7 +353,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.hamguy.HGSwiftUIDemp;
-				PRODUCT_NAME = HGSwiftUIDemp;
+				PRODUCT_NAME = HGSwiftUIDemo;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -374,7 +374,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.hamguy.HGSwiftUIDemp;
-				PRODUCT_NAME = HGSwiftUIDemp;
+				PRODUCT_NAME = HGSwiftUIDemo;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -398,7 +398,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.16;
 				PRODUCT_BUNDLE_IDENTIFIER = net.hamguy.HGSwiftUIDemp;
-				PRODUCT_NAME = HGSwiftUIDemp;
+				PRODUCT_NAME = HGSwiftUIDemo;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -420,7 +420,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.16;
 				PRODUCT_BUNDLE_IDENTIFIER = net.hamguy.HGSwiftUIDemp;
-				PRODUCT_NAME = HGSwiftUIDemp;
+				PRODUCT_NAME = HGSwiftUIDemo;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -429,7 +429,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		45A85EEF24A396F000FD8B3C /* Build configuration list for PBXProject "HGSwiftUIDemp" */ = {
+		45A85EEF24A396F000FD8B3C /* Build configuration list for PBXProject "HGSwiftUIDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				45A85F0A24A396F300FD8B3C /* Debug */,
