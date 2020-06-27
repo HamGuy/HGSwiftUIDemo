@@ -10,13 +10,23 @@ import SwiftUI
 struct ContentView: View {
     
     var course: CourseIntro
+    let screenWidth: CGFloat
+    
     init() {
         self.course = CourseIntro(id: 0, name: "Section 1", briefIntro: "New Section", icon: "Logo", pic: Image("Illustration4"))
+        #if os(macOS)
+        screenWidth =  500
+        #else
+        screenWidth = UIScreen.main.bounds.width
+        #endif
     }
     
     @State var showTitle = false
     @State var cardState = CGSize.zero
     @State var showCard = false
+    @State var bottomState = CGSize.zero
+    @State var showFullBottomView = false
+    
     
     let cardRounded = RoundedRectangle(cornerRadius: 16, style: .circular)
     
@@ -42,8 +52,11 @@ struct ContentView: View {
                     .offset(x: 0, y: showTitle ? -400 : -40)
                     .offset(x: 0 , y: showCard ? -180: -40)
                     .scaleEffect(showCard ? 1 : 0.85)
-                    .rotationEffect(.degrees( showTitle || showCard ? 0 : 10))
+                    .rotationEffect(.degrees( showTitle || showCard ? 0 : 8))
                     .animation(.easeInOut(duration: 0.5))
+                    .rotation3DEffect(
+                        .degrees(10),
+                        axis: (x: 10.0, y: 10.0, z: 10.0)                    )
                 
                 Rectangle()
                     .fill( showTitle ? Color.green : Color.blue)
@@ -52,13 +65,13 @@ struct ContentView: View {
                     .offset(x: 0, y: showTitle ? -200 : -20)
                     .offset(x: 0 , y: showCard ? -150: -20)
                     .scaleEffect( showCard ? 1: 0.95)
-                    .rotationEffect(.degrees(showTitle || showCard ? 0 : 5))
+                    .rotationEffect(.degrees(showTitle || showCard ? 0 : 4))
                     .animation(.easeInOut(duration: 0.5))
                 
                 
                 CourseCardView(course: self.course)
                     .background(Color(hex: 0x11))
-                    .frame(width: showCard ? UIScreen.main.bounds.width - 10 : 320, height: 220, alignment: .center)
+                    .frame(width: showCard ? screenWidth - 10 : 320, height: 220, alignment: .center)
 //                    .cornerRadius(16)
                     .clipShape(cardRounded)
                     .offset(x: cardState.width, y: cardState.height)
@@ -82,9 +95,30 @@ struct ContentView: View {
                 CertificationBottomView()
                     .blur(radius: showTitle ? 20.0 : 0.0)
                     .offset(x: 0, y: showCard ? 360 : 1000)
+                    .offset(y: bottomState.height)
                     .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.6))
-
-                
+                    .gesture(
+                        DragGesture()
+                            .onChanged { value in
+                                bottomState = value.translation
+                                if showFullBottomView {
+                                    bottomState.height += -300
+                                }
+                            }
+                            .onEnded { _ in
+                                if bottomState.height > 64 {
+                                    showCard = false
+                                }
+                                
+                                if (bottomState.height  < -100 && !showFullBottomView) || (bottomState.height < -250 && showFullBottomView){
+                                    bottomState.height = -300
+                                    showFullBottomView = true
+                                } else {
+                                    bottomState = .zero
+                                    showFullBottomView = false
+                                }
+                            }
+                    )
             }
             .blendMode(.hardLight)
             .background(Color(hex: 0x46b2e3))
