@@ -15,3 +15,9 @@ struct HGSwiftUIDempApp: App {
         }
     }
 }
+
+struct HGSwiftUIDempApp_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
