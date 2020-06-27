@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45462B7124A73008009F8AC7 /* ProfileMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45462B7024A73008009F8AC7 /* ProfileMenuView.swift */; };
+		45462B7224A73008009F8AC7 /* ProfileMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45462B7024A73008009F8AC7 /* ProfileMenuView.swift */; };
 		45A85F0424A396F300FD8B3C /* HGSwiftUIDempApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A85EF124A396F000FD8B3C /* HGSwiftUIDempApp.swift */; };
 		45A85F0524A396F300FD8B3C /* HGSwiftUIDempApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A85EF124A396F000FD8B3C /* HGSwiftUIDempApp.swift */; };
 		45A85F0624A396F300FD8B3C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A85EF224A396F000FD8B3C /* ContentView.swift */; };
@@ -22,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45462B7024A73008009F8AC7 /* ProfileMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMenuView.swift; sourceTree = "<group>"; };
 		45A85EF124A396F000FD8B3C /* HGSwiftUIDempApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGSwiftUIDempApp.swift; sourceTree = "<group>"; };
 		45A85EF224A396F000FD8B3C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		45A85EF324A396F300FD8B3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,6 +75,7 @@
 				45A85F1224A5872700FD8B3C /* CourseCardView.swift */,
 				45A85F1524A5882D00FD8B3C /* Color+Extension.swift */,
 				45A85F1824A58E4E00FD8B3C /* Course.swift */,
+				45462B7024A73008009F8AC7 /* ProfileMenuView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -204,6 +208,7 @@
 				45A85F1924A58E4E00FD8B3C /* Course.swift in Sources */,
 				45A85F0424A396F300FD8B3C /* HGSwiftUIDempApp.swift in Sources */,
 				45A85F1624A5882D00FD8B3C /* Color+Extension.swift in Sources */,
+				45462B7124A73008009F8AC7 /* ProfileMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +221,7 @@
 				45A85F1A24A58E4E00FD8B3C /* Course.swift in Sources */,
 				45A85F0524A396F300FD8B3C /* HGSwiftUIDempApp.swift in Sources */,
 				45A85F1724A5882D00FD8B3C /* Color+Extension.swift in Sources */,
+				45462B7224A73008009F8AC7 /* ProfileMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -104,6 +104,9 @@ struct ContentView: View {
                                 if showFullBottomView {
                                     bottomState.height += -300
                                 }
+                                if bottomState.height < -300 {
+                                    bottomState.height = -300
+                                }
                             }
                             .onEnded { _ in
                                 if bottomState.height > 64 {
