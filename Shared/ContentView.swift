@@ -16,6 +16,7 @@ struct ContentView: View {
     
     @State var show = false
     @State var cardState = CGSize.zero
+    @State var showCard = false
     
     var body: some View {
 //        NavigationView(content: {
@@ -23,7 +24,13 @@ struct ContentView: View {
                 
                 CertificationHeaderView()
                     .blur(radius: show ? 20.0 : 0.0)
-                    .animation(.easeInOut(duration: 0.5))
+                    .opacity(showCard ? 0.4 : 1)
+                    .offset(x: 0, y: showCard ? -200 : 0)
+                    .animation(
+                        Animation
+                            .default
+                            .delay(0.1)
+                    )
                 
                 
                 Rectangle()
@@ -50,7 +57,8 @@ struct ContentView: View {
                     .offset(x: cardState.width, y: cardState.height)
                     .animation(.spring(response: 0.3, dampingFraction: 0.6, blendDuration: 0))
                     .onTapGesture {
-                        show.toggle()
+//                        show.toggle()
+                        showCard.toggle()
                     }
                     .gesture(
                         DragGesture()
@@ -65,11 +73,14 @@ struct ContentView: View {
                 
                 CertificationBottomView()
                     .blur(radius: show ? 20.0 : 0.0)
-                    .animation(.easeInOut(duration: 0.5))
+                    .offset(x: 0, y: showCard ? 360 : 1000)
+                    .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.6))
+
                 
             }
             .blendMode(.hardLight)
             .background(Color(hex: 0x46b2e3))
+            
 //        }
 //        .navigationTitle("Home")
     }
@@ -111,6 +122,6 @@ struct CertificationBottomView: View {
         .frame(maxWidth: .infinity)
         .background(Color.white)
         .cornerRadius(20)
-        .offset(x: 0, y: 500)
+        
     }
 }
