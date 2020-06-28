@@ -11,13 +11,13 @@ import SwiftUI
 struct HGSwiftUIDempApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
 
 struct HGSwiftUIDempApp_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
     }
 }
