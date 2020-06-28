@@ -18,27 +18,7 @@ struct HomeView: View {
                 .edgesIgnoringSafeArea(.all)
             
             
-            VStack {
-                HStack {
-                    Text("Name Here").font(.callout)
-                    Spacer()
-                    Button(action: {
-                        showProfile.toggle()
-                    }) {
-                        Image("avatar")
-                            .renderingMode(.original)
-                            .resizable()
-                            .frame(width: 36, height: 36)
-                            .clipShape(Circle())
-                        
-                    }
-                    
-                }
-                .padding(.horizontal)
-                
-                Spacer()
-                
-            }
+            HomeContentView(showProfile: $showProfile)
             .padding(.top, 44)//UIApplication.statusBarHeight)
             .background(Color.white)
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
@@ -54,7 +34,7 @@ struct HomeView: View {
             
             
             ProfileMenuView()
-                .offset(y: showProfile ? -50 : 500)
+                .offset(y: showProfile ? -50 : SCREEN_HEIGHT)
                 .offset( y: dragState.height)
                 .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
                 .onTapGesture {
@@ -78,5 +58,25 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+    }
+}
+
+struct AvatarView: View {
+    
+    @Binding var showProfile: Bool
+    
+    var avatar: String
+    
+    var body: some View {
+        Button(action: {
+            showProfile.toggle()
+        }) {
+            Image(avatar)
+                .renderingMode(.original)
+                .resizable()
+                .frame(width: 36, height: 36)
+                .clipShape(Circle())
+            
+        }
     }
 }
