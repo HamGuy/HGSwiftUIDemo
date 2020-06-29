@@ -20,6 +20,18 @@ struct HomeContentView: View {
                 
             }
             .padding(.horizontal)
+            
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 16) {
+                    ForEach(0..<5) { item in
+                        CourseCardView()
+                    }
+                }
+                .padding(30)
+                .padding(.bottom, 30)
+            }
+            
             Spacer()
             
         }

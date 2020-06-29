@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4541115124AA360A00E4622D /* CourseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4541115024AA360A00E4622D /* CourseCardView.swift */; };
+		4541115224AA360A00E4622D /* CourseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4541115024AA360A00E4622D /* CourseCardView.swift */; };
 		45462B7124A73008009F8AC7 /* ProfileMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45462B7024A73008009F8AC7 /* ProfileMenuView.swift */; };
 		45462B7224A73008009F8AC7 /* ProfileMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45462B7024A73008009F8AC7 /* ProfileMenuView.swift */; };
 		4596B3E124A8DBE6009B30C4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4596B3E024A8DBE6009B30C4 /* HomeView.swift */; };
@@ -23,8 +25,8 @@
 		45A85F0724A396F300FD8B3C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A85EF224A396F000FD8B3C /* ContentView.swift */; };
 		45A85F0824A396F300FD8B3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45A85EF324A396F300FD8B3C /* Assets.xcassets */; };
 		45A85F0924A396F300FD8B3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45A85EF324A396F300FD8B3C /* Assets.xcassets */; };
-		45A85F1324A5872700FD8B3C /* CourseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A85F1224A5872700FD8B3C /* CourseCardView.swift */; };
-		45A85F1424A5872700FD8B3C /* CourseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A85F1224A5872700FD8B3C /* CourseCardView.swift */; };
+		45A85F1324A5872700FD8B3C /* CertificationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A85F1224A5872700FD8B3C /* CertificationCardView.swift */; };
+		45A85F1424A5872700FD8B3C /* CertificationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A85F1224A5872700FD8B3C /* CertificationCardView.swift */; };
 		45A85F1624A5882D00FD8B3C /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A85F1524A5882D00FD8B3C /* Color+Extension.swift */; };
 		45A85F1724A5882D00FD8B3C /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A85F1524A5882D00FD8B3C /* Color+Extension.swift */; };
 		45A85F1924A58E4E00FD8B3C /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A85F1824A58E4E00FD8B3C /* Course.swift */; };
@@ -32,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4541115024AA360A00E4622D /* CourseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCardView.swift; sourceTree = "<group>"; };
 		45462B7024A73008009F8AC7 /* ProfileMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMenuView.swift; sourceTree = "<group>"; };
 		4596B3E024A8DBE6009B30C4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4596B3E324A8DE6C009B30C4 /* UIApplication+Extensiom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensiom.swift"; sourceTree = "<group>"; };
@@ -45,7 +48,7 @@
 		45A85F0024A396F300FD8B3C /* HGSwiftUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HGSwiftUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A85F0224A396F300FD8B3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45A85F0324A396F300FD8B3C /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		45A85F1224A5872700FD8B3C /* CourseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCardView.swift; sourceTree = "<group>"; };
+		45A85F1224A5872700FD8B3C /* CertificationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationCardView.swift; sourceTree = "<group>"; };
 		45A85F1524A5882D00FD8B3C /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		45A85F1824A58E4E00FD8B3C /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,7 +87,7 @@
 				45A85EF124A396F000FD8B3C /* HGSwiftUIDempApp.swift */,
 				45A85EF224A396F000FD8B3C /* ContentView.swift */,
 				45A85EF324A396F300FD8B3C /* Assets.xcassets */,
-				45A85F1224A5872700FD8B3C /* CourseCardView.swift */,
+				45A85F1224A5872700FD8B3C /* CertificationCardView.swift */,
 				45A85F1524A5882D00FD8B3C /* Color+Extension.swift */,
 				45A85F1824A58E4E00FD8B3C /* Course.swift */,
 				45462B7024A73008009F8AC7 /* ProfileMenuView.swift */,
@@ -92,6 +95,7 @@
 				4596B3E324A8DE6C009B30C4 /* UIApplication+Extensiom.swift */,
 				4596B3E624A8EBF7009B30C4 /* HomeContentView.swift */,
 				4596B3E924A8EDA9009B30C4 /* Constants.swift */,
+				4541115024AA360A00E4622D /* CourseCardView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -220,12 +224,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4596B3E724A8EBF7009B30C4 /* HomeContentView.swift in Sources */,
-				45A85F1324A5872700FD8B3C /* CourseCardView.swift in Sources */,
+				45A85F1324A5872700FD8B3C /* CertificationCardView.swift in Sources */,
 				4596B3E424A8DE6C009B30C4 /* UIApplication+Extensiom.swift in Sources */,
 				4596B3E124A8DBE6009B30C4 /* HomeView.swift in Sources */,
 				45A85F0624A396F300FD8B3C /* ContentView.swift in Sources */,
 				4596B3EA24A8EDA9009B30C4 /* Constants.swift in Sources */,
 				45A85F1924A58E4E00FD8B3C /* Course.swift in Sources */,
+				4541115124AA360A00E4622D /* CourseCardView.swift in Sources */,
 				45A85F0424A396F300FD8B3C /* HGSwiftUIDempApp.swift in Sources */,
 				45A85F1624A5882D00FD8B3C /* Color+Extension.swift in Sources */,
 				45462B7124A73008009F8AC7 /* ProfileMenuView.swift in Sources */,
@@ -237,12 +242,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4596B3E824A8EBF7009B30C4 /* HomeContentView.swift in Sources */,
-				45A85F1424A5872700FD8B3C /* CourseCardView.swift in Sources */,
+				45A85F1424A5872700FD8B3C /* CertificationCardView.swift in Sources */,
 				4596B3E524A8DE6C009B30C4 /* UIApplication+Extensiom.swift in Sources */,
 				4596B3E224A8DBE6009B30C4 /* HomeView.swift in Sources */,
 				45A85F0724A396F300FD8B3C /* ContentView.swift in Sources */,
 				4596B3EB24A8EDA9009B30C4 /* Constants.swift in Sources */,
 				45A85F1A24A58E4E00FD8B3C /* Course.swift in Sources */,
+				4541115224AA360A00E4622D /* CourseCardView.swift in Sources */,
 				45A85F0524A396F300FD8B3C /* HGSwiftUIDempApp.swift in Sources */,
 				45A85F1724A5882D00FD8B3C /* Color+Extension.swift in Sources */,
 				45462B7224A73008009F8AC7 /* ProfileMenuView.swift in Sources */,

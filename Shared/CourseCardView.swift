@@ -1,44 +1,40 @@
 //
-//  CourseCardTypeA.swift
-//  HGSwiftUIDemp
+//  CourseCardView.swift
+//  HGSwiftUIDemo
 //
-//  Created by Miro on 2020/6/26.
+//  Created by Miro on 2020/6/29.
 //
 
 import SwiftUI
 
 struct CourseCardView: View {
-    
-    var course: CourseIntro
-    
-    init(course:CourseIntro) {
-        self.course = course
-    }
-    
     var body: some View {
         VStack {
-            HStack{
-                VStack(alignment: .leading, content: {
-                    Text(course.name).font(.title).foregroundColor(.red).fontWeight(.medium)
-                    Text(course.briefIntro).font(.body).foregroundColor(.white)
-                })
+            VStack {
+                HStack {
+                    Text("Here is ther course title")
+                        .foregroundColor(.white)
+                        .frame(width: 140, alignment: .leading)
+                        .font(.title)
+                    Spacer()
+                    
+    //                Image()
+                }
+                .padding()
+                
                 Spacer()
-                Image(course.icon).resizable().frame(width: 40, height: 40, alignment: .top)
-
-            }.padding()
-            Spacer()
-            course.pic.resizable().aspectRatio(contentMode: .fit)
-                .frame(width: 300, height: 110, alignment: .top)
+            }
+            .padding()
+            .frame(width: 320, height: 300)
+            .background(Color("background7"))
+            .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+            .shadow(color: Color("background7"), radius: 20,x: 0, y: 20)
         }
     }
 }
 
 struct CourseCardView_Previews: PreviewProvider {
     static var previews: some View {
-        let info = CourseIntro(id: 0, name: "Section 1", briefIntro: "New Section", icon: "Logo", pic: Image("Illustration4"))
-        return CourseCardView(course: info)
-            .background(Color.black)
-            .frame(width: 320, height: 220, alignment: .center)
-            .cornerRadius(16)
+        CourseCardView()
     }
 }

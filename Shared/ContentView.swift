@@ -69,7 +69,7 @@ struct ContentView: View {
                     .animation(.easeInOut(duration: 0.5))
                 
                 
-                CourseCardView(course: self.course)
+                CertificationCardView(course: self.course)
                     .background(Color(hex: 0x11))
                     .frame(width: showCard ? screenWidth - 10 : 320, height: 220, alignment: .center)
 //                    .cornerRadius(16)
