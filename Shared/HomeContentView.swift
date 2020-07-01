@@ -25,7 +25,15 @@ struct HomeContentView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 16) {
                     ForEach(sampleData) { course in
-                        CourseCardView(courseInfo: course)
+                        GeometryReader{ geometry in
+                            CourseCardView(courseInfo: course)
+                                .rotation3DEffect(
+                                    .degrees(Double(
+                                    geometry.frame(in: .global).minX) - 30) / -20,
+                                    axis: (x: 0.0, y: 20.0, z: 0.0)
+                                )
+                        }
+                        .frame(width: 300, height: 300)
                     }
                 }
                 .padding(30)

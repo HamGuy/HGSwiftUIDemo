@@ -12,7 +12,7 @@ struct CourseCardView: View {
     
     var body: some View {
         VStack {
-            VStack (){
+            VStack (spacing: 10){
                 HStack() {
                     Text(courseInfo.title)
                         .foregroundColor(.white)
@@ -24,23 +24,24 @@ struct CourseCardView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 36, height: 36)
                 }
-                .padding()
+                .padding(.horizontal)
                 
                 Text(courseInfo.desc)
                     .foregroundColor(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)))
                     .textCase(.uppercase)
-                    .frame(width: 260, alignment: .leading)
+                    .modifier(SameWidth(alignment: .leading))
+                    .padding(.leading, 10)
                 
                 courseInfo.icon
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 300, alignment: .center)
+                    .modifier(SameWidth())
                     
                 
                 Spacer()
             }
             .padding()
-            .frame(width: 320, height: 300)
+            .frame(width: 300, height: 300)
             .background(courseInfo.color)
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
             .shadow(color: courseInfo.color.opacity(0.3), radius: 20,x: 0, y: 20)

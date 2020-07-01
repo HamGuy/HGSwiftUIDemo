@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4541115124AA360A00E4622D /* CourseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4541115024AA360A00E4622D /* CourseCardView.swift */; };
 		4541115224AA360A00E4622D /* CourseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4541115024AA360A00E4622D /* CourseCardView.swift */; };
+		4541115424ACDD0100E4622D /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4541115324ACDD0100E4622D /* ViewModifiers.swift */; };
+		4541115524ACDD0100E4622D /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4541115324ACDD0100E4622D /* ViewModifiers.swift */; };
 		45462B7124A73008009F8AC7 /* ProfileMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45462B7024A73008009F8AC7 /* ProfileMenuView.swift */; };
 		45462B7224A73008009F8AC7 /* ProfileMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45462B7024A73008009F8AC7 /* ProfileMenuView.swift */; };
 		4596B3E124A8DBE6009B30C4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4596B3E024A8DBE6009B30C4 /* HomeView.swift */; };
@@ -35,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		4541115024AA360A00E4622D /* CourseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCardView.swift; sourceTree = "<group>"; };
+		4541115324ACDD0100E4622D /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		45462B7024A73008009F8AC7 /* ProfileMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMenuView.swift; sourceTree = "<group>"; };
 		4596B3E024A8DBE6009B30C4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4596B3E324A8DE6C009B30C4 /* UIApplication+Extensiom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensiom.swift"; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 				4596B3E624A8EBF7009B30C4 /* HomeContentView.swift */,
 				4596B3E924A8EDA9009B30C4 /* Constants.swift */,
 				4541115024AA360A00E4622D /* CourseCardView.swift */,
+				4541115324ACDD0100E4622D /* ViewModifiers.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -226,6 +230,7 @@
 				4596B3E724A8EBF7009B30C4 /* HomeContentView.swift in Sources */,
 				45A85F1324A5872700FD8B3C /* CertificationCardView.swift in Sources */,
 				4596B3E424A8DE6C009B30C4 /* UIApplication+Extensiom.swift in Sources */,
+				4541115424ACDD0100E4622D /* ViewModifiers.swift in Sources */,
 				4596B3E124A8DBE6009B30C4 /* HomeView.swift in Sources */,
 				45A85F0624A396F300FD8B3C /* ContentView.swift in Sources */,
 				4596B3EA24A8EDA9009B30C4 /* Constants.swift in Sources */,
@@ -244,6 +249,7 @@
 				4596B3E824A8EBF7009B30C4 /* HomeContentView.swift in Sources */,
 				45A85F1424A5872700FD8B3C /* CertificationCardView.swift in Sources */,
 				4596B3E524A8DE6C009B30C4 /* UIApplication+Extensiom.swift in Sources */,
+				4541115524ACDD0100E4622D /* ViewModifiers.swift in Sources */,
 				4596B3E224A8DBE6009B30C4 /* HomeView.swift in Sources */,
 				45A85F0724A396F300FD8B3C /* ContentView.swift in Sources */,
 				4596B3EB24A8EDA9009B30C4 /* Constants.swift in Sources */,
