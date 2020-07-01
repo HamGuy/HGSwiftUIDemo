@@ -24,8 +24,8 @@ struct HomeContentView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 16) {
-                    ForEach(0..<5) { item in
-                        CourseCardView()
+                    ForEach(sampleData) { course in
+                        CourseCardView(courseInfo: course)
                     }
                 }
                 .padding(30)
