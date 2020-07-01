@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeContentView: View {
     
     @Binding var showProfile: Bool
+    @State private var showModel = false
     
     var body: some View {
         VStack {
@@ -17,6 +18,20 @@ struct HomeContentView: View {
                 Text("Name Here").font(.callout)
                 Spacer()
                 AvatarView(showProfile: $showProfile, avatar: "avatar")
+                Button(action: {
+                    showModel.toggle()
+                }) {
+                    Image(uiImage: #imageLiteral(resourceName: "bell")).renderingMode(.original)
+                        .frame(width: 30, height: 30)
+                        .aspectRatio(contentMode: .fit)
+                        .background(Color.white)
+                        .clipShape(Circle())
+                        .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y:2)
+                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y:2)
+                        
+                }.sheet(isPresented: $showModel) {
+                    CertificationCardView(course: sameleCourseIntro)
+                }
                 
             }
             .padding(.horizontal)
@@ -53,3 +68,6 @@ struct HomeContentView_Previews: PreviewProvider {
         HomeContentView(showProfile: .constant(false))
     }
 }
+
+
+let sameleCourseIntro = CourseIntro(id: 0, name: "Section 1", briefIntro: "New Section", icon: "Logo", pic: Image("Illustration4"))

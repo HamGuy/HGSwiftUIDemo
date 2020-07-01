@@ -23,10 +23,11 @@ struct SameHeight: ViewModifier {
 }
 
 
-struct SameSize: ViewModifier {
-    var alignment: Alignment = .center
-    func body(content: Content) -> some View {
-        content
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: alignment)
-    }
-}
+// not worked
+//struct SameSize: ViewModifier {
+//    var alignment: Alignment = .center
+//    func body(content: Content) -> some View {
+//        content
+//            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: alignment)
+//    }
+//}
