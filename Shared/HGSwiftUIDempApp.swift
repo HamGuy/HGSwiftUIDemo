@@ -11,7 +11,10 @@ import SwiftUI
 struct HGSwiftUIDempApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            
+           
+            TabBar()
+            
         }
     }
 }

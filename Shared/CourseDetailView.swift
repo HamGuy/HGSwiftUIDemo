@@ -12,19 +12,22 @@ struct CourseDetailView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                course.pic
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 300, alignment: .center)
-                
-                Text(course.briefIntro)
-                    .font(.caption)
-                
-                Spacer()
+            ScrollView {
+                VStack {
+                    course.pic
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .modifier(SameWidth())
                     
-            }.navigationTitle(course.title)
-            .padding()
+                    Text(course.briefIntro)
+                        .font(.body)
+                        .modifier(SameWidth(alignment: .leading))
+                    
+                    Spacer()
+                        
+                }.navigationTitle(course.title)
+                .padding()
+            }
         }
     }
 }

@@ -30,7 +30,7 @@ struct HomeContentView: View {
                         .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y:2)
                         
                 }.sheet(isPresented: $showModel) {
-                    CertificationCardView(course: sampleData.first!)
+                    CourseListView()
                 }
                 
             }
@@ -49,6 +49,7 @@ struct HomeContentView: View {
                                 )
                         }
                         .frame(width: 300, height: 300)
+                            
                     }
                 }
                 .padding(30)
