@@ -9,11 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var course: CourseIntro
     let screenWidth: CGFloat
     
     init() {
-        self.course = CourseIntro(id: 0, name: "Section 1", briefIntro: "New Section", icon: "Logo", pic: Image("Illustration4"))
         #if os(macOS)
         screenWidth =  500
         #else
@@ -69,7 +67,7 @@ struct ContentView: View {
                     .animation(.easeInOut(duration: 0.5))
                 
                 
-                CertificationCardView(course: self.course)
+                CertificationCardView(course: sampleData.first!)
                     .background(Color(hex: 0x11))
                     .frame(width: showCard ? screenWidth - 10 : 320, height: 220, alignment: .center)
 //                    .cornerRadius(16)

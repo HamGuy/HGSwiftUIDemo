@@ -30,7 +30,7 @@ struct HomeContentView: View {
                         .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y:2)
                         
                 }.sheet(isPresented: $showModel) {
-                    CertificationCardView(course: sameleCourseIntro)
+                    CertificationCardView(course: sampleData.first!)
                 }
                 
             }
@@ -62,12 +62,7 @@ struct HomeContentView: View {
 }
 
 struct HomeContentView_Previews: PreviewProvider {
-    
-    
     static var previews: some View {
         HomeContentView(showProfile: .constant(false))
     }
 }
-
-
-let sameleCourseIntro = CourseIntro(id: 0, name: "Section 1", briefIntro: "New Section", icon: "Logo", pic: Image("Illustration4"))

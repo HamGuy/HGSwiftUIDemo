@@ -26,13 +26,13 @@ struct CourseCardView: View {
                 }
                 .padding(.horizontal)
                 
-                Text(courseInfo.desc)
+                Text(courseInfo.section)
                     .foregroundColor(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)))
                     .textCase(.uppercase)
                     .modifier(SameWidth(alignment: .leading))
                     .padding(.leading, 10)
                 
-                courseInfo.icon
+                courseInfo.pic
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .modifier(SameWidth())
@@ -57,21 +57,3 @@ struct CourseCardView_Previews: PreviewProvider {
     }
 }
 
-struct CourseInfo: Identifiable {
-    var id = UUID()
-    var title: String
-    var desc: String
-    var logo: Image
-    var icon: Image
-    var color: Color
-    
-}
-
-
-let sampleData = [
-    CourseInfo(title: "Here is the Course Title", desc: "32 sections", logo: Image(uiImage: #imageLiteral(resourceName: "Logo1")), icon: Image(uiImage: #imageLiteral(resourceName: "Card1")), color: Color("background6")),
-    CourseInfo(title: "What's new inf SwiftUI", desc: "18 sections", logo: Image(uiImage: #imageLiteral(resourceName: "Logo1")), icon: Image(uiImage: #imageLiteral(resourceName: "Card4")), color: Color("background5")),
-    CourseInfo(title: "Here is the Course Title3", desc: "20 sections", logo: Image(uiImage: #imageLiteral(resourceName: "Logo1")), icon: Image(uiImage: #imageLiteral(resourceName: "Card3")), color: Color("background4")),
-    CourseInfo(title: "Here is the Course Title4", desc: "12 sections", logo: Image(uiImage: #imageLiteral(resourceName: "Logo1")), icon: Image(uiImage: #imageLiteral(resourceName: "Illustration1")), color: Color("background3")),
-    CourseInfo(title: "Here is the Course Title5", desc: "8 sections", logo: Image(uiImage: #imageLiteral(resourceName: "Logo1")), icon: Image(uiImage: #imageLiteral(resourceName: "Card2")), color: Color("background7")),
-]

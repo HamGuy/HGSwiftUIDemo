@@ -14,9 +14,9 @@ struct CourseListView: View {
             
             List(sampleData){ data in
                 
-                NavigationLink(destination: Text(data.title)) {
+                NavigationLink(destination: CourseDetailView(course: data)) {
                     HStack {
-                        data.icon
+                        data.pic
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 80, height: 80)
@@ -27,7 +27,13 @@ struct CourseListView: View {
                         
                         VStack(alignment: .leading) {
                             Text(data.title)
-                            Text(data.desc).font(.caption2)
+                            Text(data.briefIntro)
+                                .font(.caption)
+                                .lineLimit(2)
+                                .foregroundColor(.secondary)
+                            Text(data.date)
+                                .font(.caption2)
+                                .padding(.top, 10)
                             Spacer()
                         }
                     }

@@ -9,21 +9,17 @@ import SwiftUI
 
 struct CertificationCardView: View {
     
-    var course: CourseIntro
-    
-    init(course:CourseIntro) {
-        self.course = course
-    }
+    var course: CourseInfo
     
     var body: some View {
         VStack {
             HStack{
                 VStack(alignment: .leading, content: {
-                    Text(course.name).font(.title).foregroundColor(.red).fontWeight(.medium)
+                    Text(course.title).font(.title).foregroundColor(.red).fontWeight(.medium)
                     Text(course.briefIntro).font(.body).foregroundColor(.white)
                 })
                 Spacer()
-                Image(course.icon).resizable().frame(width: 40, height: 40, alignment: .top)
+                course.pic.resizable().frame(width: 40, height: 40, alignment: .top)
 
             }.padding()
             Spacer()
@@ -35,8 +31,7 @@ struct CertificationCardView: View {
 
 struct CertificationCardView_Previews: PreviewProvider {
     static var previews: some View {
-        let info = CourseIntro(id: 0, name: "Section 1", briefIntro: "New Section", icon: "Logo", pic: Image("Illustration4"))
-        return CertificationCardView(course: info)
+        return CertificationCardView(course: sampleData.first!)
             .background(Color.black)
             .frame(width: 320, height: 220, alignment: .center)
             .cornerRadius(16)
