@@ -54,7 +54,9 @@ struct ContentView: View {
                     .animation(.easeInOut(duration: 0.5))
                     .rotation3DEffect(
                         .degrees(10),
-                        axis: (x: 10.0, y: 10.0, z: 10.0)                    )
+                        axis: (x: 10.0, y: 10.0, z: 10.0)
+                    )
+                    
                 
                 Rectangle()
                     .fill( showTitle ? Color.green : Color.blue)
@@ -89,8 +91,12 @@ struct ContentView: View {
                                 showTitle = false
                             }
                     )
+                    
+                    .blendMode(.hardLight)
                 
-                CertificationBottomView()
+//                RingView(showProgress: .constant(true))
+                
+                CertificationBottomView(showProgress: $showCard)
                     .blur(radius: showTitle ? 20.0 : 0.0)
                     .offset(x: 0, y: showCard ? 360 : 1000)
                     .offset(y: bottomState.height)
@@ -121,11 +127,8 @@ struct ContentView: View {
                             }
                     )
             }
-            .blendMode(.hardLight)
-            .background(Color(hex: 0x46b2e3))
+//            .blendMode(.darken)
             
-//        }
-//        .navigationTitle("Home")
     }
 }
 
@@ -139,7 +142,7 @@ struct CertificationHeaderView: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Certificate").foregroundColor(.white).font(.largeTitle).fontWeight(.bold)
+                Text("Certificate").foregroundColor(.black).font(.largeTitle).fontWeight(.bold)
                 Spacer()
             }.padding()
             Image("Illustration1")
@@ -149,6 +152,8 @@ struct CertificationHeaderView: View {
 }
 
 struct CertificationBottomView: View {
+    @Binding var showProgress: Bool
+    
     var body: some View {
         VStack (spacing: 20){
             Rectangle()
@@ -160,11 +165,23 @@ struct CertificationBottomView: View {
             Text("Currently, when I instantiate this view I'm required to pass both text and name names to arguments. I want to be able to make the name argument optional, like in the example below.")
                 .lineSpacing(2.5)
                 .multilineTextAlignment(.center)
+            HStack(spacing: 20.0) {
+                RingView(percent: 56, width:64, showProgress: $showProgress)
+                    .animation(Animation.easeInOut.delay(0.3))
+                VStack(alignment: .leading, spacing: 8.0) {
+                    Text("Leadrn Swift UI")
+                    Text("12 of 20 Completed!\n20 Hours Spent")
+                        .font(.footnote)
+                        .foregroundColor(.secondary)
+                        .lineSpacing(4)
+                }
+            }
             Spacer()
         }
         .frame(maxWidth: .infinity)
         .background(Color.white)
         .cornerRadius(20)
+        
         
     }
 }

@@ -14,16 +14,18 @@ struct RingView: View {
     var percent: CGFloat = 88
     var width: CGFloat = 100
     
+    @Binding var showProgress: Bool
+    
     var body: some View {
         let scaleFactor: CGFloat = width / 44
         let progress = 1 - percent/100
         
-       return  ZStack {
+        return  ZStack {
             Circle()
                 .stroke(Color.black.opacity(0.1), style: StrokeStyle(lineWidth: 5 * scaleFactor
                                                                      , lineCap: .round, lineJoin: .round, miterLimit: .infinity, dash: [20 * scaleFactor,0], dashPhase: 0))
             Circle()
-                .trim(from: progress ,to: 1)
+                .trim(from: showProgress ? progress : 1 ,to: 1)
                 .stroke(LinearGradient(gradient: Gradient(colors: [fromColor, toColor]), startPoint: .topLeading, endPoint: .bottomTrailing), style: StrokeStyle(lineWidth: 5 * scaleFactor, lineCap: .round, lineJoin: .round, miterLimit: .infinity, dash: [20 * scaleFactor,0], dashPhase: 0))
                 .rotationEffect(.degrees(90), anchor: .center)
                 .rotation3DEffect(
@@ -31,7 +33,7 @@ struct RingView: View {
                     axis: (x: 1.0, y: 0.0, z: 0.0)
                 )
                 .shadow(color: shadowColor, radius: 3 * scaleFactor,x:0,y:3 * scaleFactor)
-        HStack(alignment:.top) {
+            HStack {
                 Text("\(Int(ceil(percent)))")
                     .font(.system(size: 16 * scaleFactor))
                     .fontWeight(.semibold)
@@ -42,6 +44,9 @@ struct RingView: View {
                     .padding(.leading, -8)
                     .padding(.top,10)
             }
+            .onTapGesture {
+                showProgress.toggle()
+            }
         }
         .frame(width: width, height: width)
         .shadow(color: Color.black.opacity(0.1), radius: 3*scaleFactor, x: 0 , y: 3*scaleFactor)
@@ -50,6 +55,6 @@ struct RingView: View {
 
 struct RingView_Previews: PreviewProvider {
     static var previews: some View {
-        RingView(percent: 82)
+        RingView(percent: 82, showProgress: .constant(true))
     }
 }

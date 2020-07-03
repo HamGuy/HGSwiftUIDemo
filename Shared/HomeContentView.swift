@@ -36,6 +36,24 @@ struct HomeContentView: View {
             }
             .padding(.horizontal)
             
+            ScrollView(.horizontal) {
+                HStack(spacing: 20.0) {
+                    HStack {
+                        RingView(percent: 56, width: 44 ,showProgress: .constant(true))
+                        VStack(alignment: .leading, spacing: 4.0) {
+                            Text("6 Minutes")
+                            Text("I do not know why")
+                        }
+                    }
+                    .padding(8)
+                    .background(Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                    .modifier(DoubleShadow())
+                    RingView(percent: 36, width: 44 ,showProgress: .constant(true))
+                    RingView(percent: 27, width: 44 ,showProgress: .constant(true))}
+            }
+            .padding(20)
+            
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 16) {
