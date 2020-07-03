@@ -42,7 +42,11 @@ struct HomeContentView: View {
                         RingView(percent: 56, width: 44 ,showProgress: .constant(true))
                         VStack(alignment: .leading, spacing: 4.0) {
                             Text("6 Minutes")
+                                .font(.custom("LibreBaskerville-Bold", size: 16, relativeTo: .subheadline))
                             Text("I do not know why")
+                                .font(.custom("LibreBaskerville-Regular", size: 16, relativeTo: .body))
+                                .foregroundColor(.secondary)
+                            
                         }
                     }
                     .padding(8)

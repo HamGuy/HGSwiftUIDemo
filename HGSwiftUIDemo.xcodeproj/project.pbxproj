@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		451B238D24AF8C9A00727979 /* Libre_Baskerville in Resources */ = {isa = PBXBuildFile; fileRef = 451B238C24AF8C9A00727979 /* Libre_Baskerville */; };
+		451B238E24AF8C9A00727979 /* Libre_Baskerville in Resources */ = {isa = PBXBuildFile; fileRef = 451B238C24AF8C9A00727979 /* Libre_Baskerville */; };
 		4541115124AA360A00E4622D /* CourseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4541115024AA360A00E4622D /* CourseCardView.swift */; };
 		4541115224AA360A00E4622D /* CourseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4541115024AA360A00E4622D /* CourseCardView.swift */; };
 		4541115424ACDD0100E4622D /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4541115324ACDD0100E4622D /* ViewModifiers.swift */; };
@@ -46,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		451B238C24AF8C9A00727979 /* Libre_Baskerville */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Libre_Baskerville; sourceTree = "<group>"; };
 		4541115024AA360A00E4622D /* CourseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCardView.swift; sourceTree = "<group>"; };
 		4541115324ACDD0100E4622D /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		4541115624ACED3200E4622D /* CourseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListView.swift; sourceTree = "<group>"; };
@@ -102,6 +105,7 @@
 		45A85EF024A396F000FD8B3C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				451B238C24AF8C9A00727979 /* Libre_Baskerville */,
 				45A85EF124A396F000FD8B3C /* HGSwiftUIDempApp.swift */,
 				45A85EF224A396F000FD8B3C /* ContentView.swift */,
 				45A85EF324A396F300FD8B3C /* Assets.xcassets */,
@@ -228,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				451B238D24AF8C9A00727979 /* Libre_Baskerville in Resources */,
 				45A85F0824A396F300FD8B3C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				451B238E24AF8C9A00727979 /* Libre_Baskerville in Resources */,
 				45A85F0924A396F300FD8B3C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
