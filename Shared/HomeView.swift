@@ -11,6 +11,7 @@ struct HomeView: View {
     
     @State private var showProfile = false
     @State private var dragState = CGSize.zero
+    @State private var showContent = false
     
     var body: some View {
         ZStack {
@@ -18,9 +19,15 @@ struct HomeView: View {
                 .edgesIgnoringSafeArea(.all)
             
             
-            HomeContentView(showProfile: $showProfile)
+            HomeContentView(showProfile: $showProfile, showContent: $showContent)
             .padding(.top, 44)//UIApplication.statusBarHeight)
-            .background(Color.white)
+            .background(
+                VStack {
+                    LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)), Color.white]), startPoint: .top, endPoint: .bottom)
+                    Spacer()
+                }
+                .background(Color.white)
+            )
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
             .shadow(color: Color.black.opacity(0.3), radius: 30, x: 0, y: 20)
             .offset(y: showProfile ? -400 : 0)
@@ -49,7 +56,40 @@ struct HomeView: View {
                                 showProfile = false
                             }
                             dragState = .zero
-                        }))
+                        })
+                )
+            
+           
+            
+            if showContent {
+                Color.white
+                    .edgesIgnoringSafeArea(.all)
+                
+                VStack {
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            showContent = false
+                        }) {
+                            Image(systemName: "xmark")
+                                .frame(width: 36, height: 36)
+                                .background(Color.black)
+                                .clipShape(Circle())
+                        }
+                        
+                    }
+                    Spacer()
+                }
+                .offset(x: -16, y: 16)
+                .transition(.move(edge: .top))
+                .animation(.spring(response: 0.6, dampingFraction: 0.8, blendDuration: 0))
+                
+                ContentView()
+                
+                
+                
+            }
+            
         }
         
     }

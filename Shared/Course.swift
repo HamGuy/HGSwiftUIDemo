@@ -20,6 +20,21 @@ struct CourseInfo: Identifiable {
 }
 
 
+struct CourseProgress: Identifiable {
+    var id = UUID()
+    var title:String?
+    var desc: String?
+    var percent: CGFloat
+}
+
+
+let sampleCourseProgresses = [
+    CourseProgress(title: "6 Minutes", desc: "I do not know whuy", percent: 56),
+    CourseProgress(percent: 64),
+    CourseProgress(percent: 32),
+    CourseProgress(percent: 78)
+]
+
 let sampleData = [
     CourseInfo(title: "Learn Swift UI", briefIntro: "Design and animate a high converting landing page with advanced interactions, payments and CMS",date:"Jan 1" ,section: "18 Sections", logo: Image(uiImage: #imageLiteral(resourceName: "Logo1")), pic: Image(uiImage: #imageLiteral(resourceName: "Card1")), color: Color("background7")),
     CourseInfo(title: "Webflow", briefIntro: "Design and animate a high converting landing page with advanced interactions, payments and CMS", date: "OCT 17" ,section: "18 Sections", logo: Image(uiImage: #imageLiteral(resourceName: "Logo1")), pic: Image(uiImage: #imageLiteral(resourceName: "Illustration4")), color: Color("background5")),

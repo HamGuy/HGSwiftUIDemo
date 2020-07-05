@@ -25,12 +25,12 @@ struct SameHeight: ViewModifier {
 struct DoubleShadow: ViewModifier {
     
     var color = Color.black
-    var radius1: CGFloat = 20
+    var radius1: CGFloat = 10
     var radius2: CGFloat = 1
     
     func body(content: Content) -> some View {
         content
-            .shadow(color: color.opacity(0.2), radius: radius1, x: 0, y:radius1)
+            .shadow(color: color.opacity(0.1), radius: radius1, x: 0, y:radius1)
             .shadow(color: color.opacity(0.1), radius: radius2, x: 0, y:radius2)
 
     }
