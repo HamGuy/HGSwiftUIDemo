@@ -49,12 +49,26 @@ struct HomeContentView: View {
                             
                         }
                     }
+                    
+                    .padding(8)
+                    .background(Color.white)
+                    .cornerRadius(8)
+                    .modifier(DoubleShadow())
+                    HStack {
+                        RingView(percent: 36, width: 44 ,showProgress: .constant(true))
+                    }
                     .padding(8)
                     .background(Color.white)
                     .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
                     .modifier(DoubleShadow())
-                    RingView(percent: 36, width: 44 ,showProgress: .constant(true))
-                    RingView(percent: 27, width: 44 ,showProgress: .constant(true))}
+                    HStack{
+                        RingView(percent: 27, width: 44 ,showProgress: .constant(true))
+                    }
+                    .padding(8)
+                    .background(Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                    .modifier(DoubleShadow())
+                }
             }
             .padding(20)
             
