@@ -8,19 +8,49 @@
 import SwiftUI
 
 struct CourseView: View {
-    @State private var showAll = false
+    
+    @State var expended = false
+    
+    var body: some View {
+        ScrollView {
+            VStack(spacing: 30.0) {
+                CourseInnerInfoView(showAll: $expended)
+                GeometryReader { geometry in
+                    CourseInnerInfoView(showAll: $expended)
+                        .offset(y: expended ? -geometry.frame(in: .global).minY : 0)
+                }
+                .frame(height: expended ? SCREEN_HEIGHT : 280)
+                .frame(maxWidth: expended ? .infinity : SCREEN_WIDTH - 60)
+            }
+            .frame(width: SCREEN_WIDTH)
+        }
+    }
+}
+
+struct CourseView_Previews: PreviewProvider {
+    static var previews: some View {
+        CourseView()
+    }
+}
+
+fileprivate struct CourseInnerInfoView: View {
+    
+    @Binding var showAll:Bool
     
     var body: some View {
         ZStack(alignment: .top) {
             VStack(alignment: .leading, spacing: 16.0) {
                 Text("The Fruta sample app builds an app for macOS, iOS, and iPadOS that implements SwiftUI platform features like widgets or app clips. Users can order smoothies, save favorite drinks, collect rewards, and browse recipes.")
+                Text("Swift UI Advanced")
+                    .font(.title)
+                Text("The sample app’s Xcode project includes widget extensions that enable users to add a widget to their iOS Home screen or the macOS Notification Center and view their rewards or a favorite smoothie. The Xcode project also includes an app clip target. With the app clip, users can discover and instantly launch some of the app’s functionality on their iPhone or iPad without installing the full app")
                 Text("The sample app’s Xcode project includes widget extensions that enable users to add a widget to their iOS Home screen or the macOS Notification Center and view their rewards or a favorite smoothie. The Xcode project also includes an app clip target. With the app clip, users can discover and instantly launch some of the app’s functionality on their iPhone or iPad without installing the full app")
             }
             .padding()
             .frame(maxWidth: showAll ? .infinity : SCREEN_WIDTH - 60, maxHeight: showAll ? .infinity : 0)
             .background(Color.white)
             .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0 , y: 20)
-            .offset(y: showAll ? 100 : 0)
+            .offset(y: showAll ? 360 : 0)
             .opacity(showAll ? 1 : 0)
             
             VStack {
@@ -69,11 +99,5 @@ struct CourseView: View {
         }
         .animation(.spring(response: 0.6, dampingFraction: 0.5, blendDuration: 0))
         .edgesIgnoringSafeArea(.all)
-    }
-}
-
-struct CourseView_Previews: PreviewProvider {
-    static var previews: some View {
-        CourseView()
     }
 }
